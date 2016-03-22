@@ -13,4 +13,4 @@
 3. Fix build path:
 	1. all d2j projects
 	2. all apktool projects
-	3. asm-debug-all-4.1.jar as external jar library
+	3. add asm-debug-all-4.1.jar as external jar library
