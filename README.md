@@ -25,7 +25,7 @@ The sections are structured as follows:
 	
 # Purpouses
 
-The firt aim is double: I wish transform dex into standard java class files and also transform XML file in a readable format.
+- The firt aim is double: I wish transform dex into standard java class files and also transform XML file in a readable format.
 
 Unfortunally I did not able to find a full library which can perform both tasks.
 To achieve this I merged two stable tools: Dex2Jar and ApkTool.
@@ -34,14 +34,14 @@ To achieve this I merged two stable tools: Dex2Jar and ApkTool.
 
 **ApkTool** performs the XML transformation. The xml files kept into Apk are stored in a binary format, this tool is able to revert them in a readable format.
 
-The second aim is transfer debug information from Des to Class. 
+- The second aim is transfer debug information from Des to Class. 
 
 Even in this case, there are not tools able to perform this operation.
 To achieve it I've developed a new code-transformation in Dex2Jar which try to preserve line numbers. This is just a prototype, but it works fine on my tests.
 This technique is quite simple, the main problem is the standard of dex that does not permit a full code recovering, thus some debug information are lost.
 Anyway, this is not a problem from a semantic point of view.
 
-The thirth aim is procude 2 final jar files. 
+- The thirth aim is procude 2 final jar files. 
 
 One whitch contains all classes that belong to original application, and another one which contains all classes used as library.
 This point is important in order to perform better analysis throuth Julia.
