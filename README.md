@@ -55,7 +55,7 @@ The transformation is performed by JuliaConverter class. It exposes a public met
 - fileNameApplication: JAR file that will contain all application classes, AndroidManifest.xml and other resources
 - fileNameLibrary: JAR file that will contain all library classes
 	
-To correclty use JuliaConverter class, you needs to set these properties:
+To correclty use JuliaConverter class, you also need to set these properties:
 
 - pathTemp: a temorary folder
 - pathTmpFileNameClass: a file name where all class files will be temporarily stored
