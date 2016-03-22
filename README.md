@@ -1,10 +1,10 @@
-This file is amied to give an overview about the program configuration and the basic idea that stayes behind the tool.
+This file is aimed to give an overview about the program configuration and to give the basic idea that stands behind.
 
-The follow sections are structured as well:
+The sections are structured as follows:
 
-1. A quickly guide to import the project in Eclipse
-2. An overview on the basic idea
-3. A simple explanation about the program structure
+1. Quickly guide to import the project in Eclipse
+2. The main purpouse of tool
+3. Program structure
 
 # JuliaDexConverter setup
 
@@ -19,16 +19,16 @@ The follow sections are structured as well:
 1. Julia Dex Converter clone: git clone https://tregua87@bitbucket.org/tregua87/juliadexconverter.git
 2. Import project in Eclipse
 3. Fix build path:
-	1. all d2j projects
-	2. all apktool projects
+	1. add all d2j projects
+	2. add all apktool projects
 	3. add asm-debug-all-4.1.jar as external jar library
 	
 # Purpouses
 
-The firt aim is double: I wish transform dex file in standard java class files and also transform XML file in a readable format.
-Unfortunally I did not able to find a full library which can perform both operation.
+The firt aim is double: I wish transform dex into standard java class files and also transform XML file in a readable format.
+Unfortunally I did not able to find a full library which can perform both tasks.
 To achieve this I merged two stable tools: Dex2Jar and ApkTool.
-**Dex2Jar** performs the code transformation, it reads dex file and, throuth a set of code manipulation, it will re-build all class files (with some approximations).
+**Dex2Jar** performs the code transformation, it reads dex file and, throuth a set of code manipulation, it will re-build relative class files (with some approximations).
 **ApkTool** performs the XML transformation. The xml files kept into Apk are stored in a binary format, this tool is able to revert them in a readable format.
 
 The second aim is transfer debug information from Des to Class. 
