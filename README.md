@@ -8,10 +8,9 @@
 
 ## Eclipse settings
 
-- Julia Dex Converter clone: git clone https://tregua87@bitbucket.org/tregua87/juliadexconverter.git
-- Import project in Eclipse
-- Fix build path:
-	- all d2j projects
-	- all apktool projects
-	- asm-debug-all-4.1.jar as external jar library
-
+1. Julia Dex Converter clone: git clone https://tregua87@bitbucket.org/tregua87/juliadexconverter.git
+2. Import project in Eclipse
+3. Fix build path:
+	1. all d2j projects
+	2. all apktool projects
+	3. asm-debug-all-4.1.jar as external jar library
