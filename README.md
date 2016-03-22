@@ -1,5 +1,6 @@
 This file is amied to give an overview about the program configuration and the basic idea that stayes behind the tool.
-The follow sections are structured:
+
+The follow sections are structured as well:
 
 1. A quickly guide to import the project in Eclipse
 2. An overview on the basic idea
@@ -22,7 +23,7 @@ The follow sections are structured:
 	2. all apktool projects
 	3. add asm-debug-all-4.1.jar as external jar library
 	
-# Basic Idea
+# Purpouses
 
 The firt aim is double: I wish transform dex file in standard java class files and also transform XML file in a readable format.
 Unfortunally I did not able to find a full library which can perform both operation.
