@@ -50,14 +50,16 @@ From a pratical point of view, we'll submit application jar file with -si option
 # How it works
 
 The transformation is performed by JuliaConverter class. It exposes a public method namely apk2Jar which takes in input:
-	- fileNameInput: started APK
-	- fileNameApplication: JAR file that will contain all application classes, AndroidManifest.xml and other resources
-	- fileNameLibrary: JAR file that will contain all library classes
+
+- fileNameInput: started APK
+- fileNameApplication: JAR file that will contain all application classes, AndroidManifest.xml and other resources
+- fileNameLibrary: JAR file that will contain all library classes
 	
 To correclty use JuliaConverter class, you needs to set these properties:
-	- pathTemp: a temorary folder
-	- pathTmpFileNameClass: a file name where all class files will be temporarily stored
-	- pathTmpFileNameXml: a file name where all xml files and other resources will be temporarily stored
+
+- pathTemp: a temorary folder
+- pathTmpFileNameClass: a file name where all class files will be temporarily stored
+- pathTmpFileNameXml: a file name where all xml files and other resources will be temporarily stored
 
 There is a full example in class Main.
 
