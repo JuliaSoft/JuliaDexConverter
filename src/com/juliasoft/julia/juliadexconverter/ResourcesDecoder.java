@@ -1,4 +1,4 @@
-package com.juliasoft.julia.d2jtest;
+package com.juliasoft.julia.juliadexconverter;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -16,7 +16,7 @@ import java.util.jar.JarOutputStream;
 import org.apache.commons.io.FileUtils;
 
 import com.googlecode.d2j.dex.Dex2jar;
-import com.juliasoft.julia.d2jtest.utils.JarUtils;
+import com.juliasoft.julia.juliadexconverter.utils.JarUtils;
 
 import brut.androlib.Androlib;
 import brut.androlib.AndrolibException;
@@ -58,12 +58,12 @@ public class ResourcesDecoder {
 			return;
 		}
 
-		try {			
-			if(!hasManifest() && !hasResources()) {
+		try {
+			if (!hasManifest() && !hasResources()) {
 				System.err.println("Neither manifest nor resources, exit");
 				return;
 			}
-			
+
 			if (hasManifest())
 				mAndrolib.decodeManifestFull(mApkFile, outDir, getResTable());
 
@@ -80,12 +80,10 @@ public class ResourcesDecoder {
 		try {
 
 			JarUtils.createJar(outputFile, outDir);
-			
-			
+
 			FileUtils.deleteDirectory(outDir);
 		} catch (IOException e) {
-			
-			
+
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -132,7 +130,7 @@ public class ResourcesDecoder {
 	}
 
 	public ResourcesDecoder setTempDir(String t) {
-		
+
 		this.tmpDir = t;
 
 		return this;

@@ -1,4 +1,4 @@
-package com.juliasoft.julia.d2jtest;
+package com.juliasoft.julia.juliadexconverter;
 
 import java.io.File;
 import java.io.FilenameFilter;

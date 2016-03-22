@@ -1,4 +1,4 @@
-package com.juliasoft.julia.d2jtest.utils;
+package com.juliasoft.julia.juliadexconverter.utils;
 
 import java.io.File;
 import java.io.FileNotFoundException;

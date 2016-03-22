@@ -1,4 +1,4 @@
-package com.juliasoft.julia.d2jtest;
+package com.juliasoft.julia.juliadexconverter;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +20,7 @@ import com.googlecode.d2j.dex.Dex2jar;
 import com.googlecode.d2j.reader.BaseDexFileReader;
 import com.googlecode.d2j.reader.MultiDexFileReader;
 import com.googlecode.dex2jar.tools.BaksmaliBaseDexExceptionHandler;
-import com.juliasoft.julia.d2jtest.utils.JarUtils;
+import com.juliasoft.julia.juliadexconverter.utils.JarUtils;
 
 public class JuliaConverter {
 
@@ -80,7 +80,7 @@ public class JuliaConverter {
 		String applicationPackage = getPackageName(tmpFileName + File.separator + "AndroidManifest.xml");
 
 		String folderApplicationPackage = "";
-		
+
 		for (String i : applicationPackage.split("\\."))
 			folderApplicationPackage += i + File.separator;
 		folderApplicationPackage = folderApplicationPackage.substring(0, folderApplicationPackage.length() - 1);
