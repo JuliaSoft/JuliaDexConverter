@@ -93,7 +93,7 @@ public class JuliaConverter {
 		folderApplicationPackage = folderApplicationPackage.substring(0, folderApplicationPackage.length() - 1);
 
 		// move generated file in the outgoing JAR
-		try {
+		try { 
 			
 			// 5. Compress all files under package_folder/, res/ and AndroidManifest.xml in app.jar file
 			String[] applicationFiles = { folderApplicationPackage, "res", "AndroidManifest.xml" };
@@ -106,6 +106,7 @@ public class JuliaConverter {
 				else
 					f.delete();
 			}
+			FileUtils.deleteDirectory(new File("META-INF"));
 			
 			// 6. Compress other files in lib.jar file
 			JarUtils.createJar(fileNameLibrary, tmpFileName);

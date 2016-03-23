@@ -10,9 +10,11 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
+import java.util.jar.Attributes;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarOutputStream;
+import java.util.jar.Manifest;
 
 import org.apache.commons.io.FileUtils;
 
@@ -24,7 +26,11 @@ public class JarUtils {
 	}
 
 	public static void createJar(File outputFile, File fileDir) throws FileNotFoundException, IOException {
-		JarOutputStream jarOutputStream = new JarOutputStream(new FileOutputStream(outputFile));
+
+		Manifest manifest = new Manifest();
+		manifest.getMainAttributes().put(Attributes.Name.MANIFEST_VERSION, "1.0");
+
+		JarOutputStream jarOutputStream = new JarOutputStream(new FileOutputStream(outputFile), manifest);
 
 		addAllFiles(fileDir, jarOutputStream, "");
 
@@ -73,15 +79,23 @@ public class JarUtils {
 
 	private static void addEntry(File f, JarOutputStream jarOutputStream, String internalPath) throws IOException {
 
-		jarOutputStream.putNextEntry(new JarEntry(internalPath + f.getName()));
+		JarEntry entry = new JarEntry(internalPath + f.getName());
+		jarOutputStream.putNextEntry(entry);
 		jarOutputStream.write(Files.toByteArray(f));
 		jarOutputStream.closeEntry();
 	}
 
 	public static void createJar(String outputFile, File fileDir, final String[] filter) throws IOException {
-		JarOutputStream jarOutputStream = new JarOutputStream(new FileOutputStream(outputFile));
+		
+		Manifest manifest = new Manifest();
+		manifest.getMainAttributes().put(Attributes.Name.MANIFEST_VERSION, "1.0");
+		
+		FileOutputStream fos = new FileOutputStream(outputFile);
+		
+		JarOutputStream jarOutputStream = new JarOutputStream(fos, manifest);
 		addAllFilesFilter(fileDir, jarOutputStream, "", filter);
 		jarOutputStream.close();
+		fos.close();
 	}
 
 	private static void addAllFilesFilter(File outDir, JarOutputStream jarOutputStream, String internalPath,
