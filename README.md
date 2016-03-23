@@ -10,18 +10,18 @@ The sections are structured as follows:
 
 ## Requirement:
 
-- (My)Dex2Jar sources
-- ApkTool sources
-- asm-debug-all-4.1.jar download
+- (My)Dex2Jar sources (git clone https://tregua87@bitbucket.org/tregua87/dex2jar.git)
+- ApkTool sources (git clone https://github.com/iBotPeaches/Apktool.git)
+- asm-debug-all-4.1.jar download (search it on Web)
 
 ## Eclipse settings
 
 1. Julia Dex Converter clone: git clone https://tregua87@bitbucket.org/tregua87/juliadexconverter.git
 2. Import project in Eclipse
 3. Fix build path:
-	1. add all d2j projects (git clone https://tregua87@bitbucket.org/tregua87/dex2jar.git)
-	2. add all apktool projects (git clone https://github.com/iBotPeaches/Apktool.git)
-	3. add asm-debug-all-4.1.jar as external jar library (search it on Web)
+	1. add all d2j projects 
+	2. add all apktool projects
+	3. add asm-debug-all-4.1.jar as external jar library
 	
 # Purpouses
 
@@ -32,7 +32,7 @@ To achieve this I merged two stable tools: Dex2Jar and ApkTool.
 
 **Dex2Jar** performs the code transformation, it reads dex file and, throuth a set of code manipulation, it will re-build relative class files (with some approximations).
 
-**ApkTool** performs the XML transformation: the xml files kept into apk are stored in a binary format, this tool is able to revert them in a readable rapresentation.
+**ApkTool** performs the XML transformation: the xml files kept into apk are stored in a binary format, this tool is able to revert them in a readable representation.
 
 - The second aim is to transfer debug information from Dex to Class. 
 
