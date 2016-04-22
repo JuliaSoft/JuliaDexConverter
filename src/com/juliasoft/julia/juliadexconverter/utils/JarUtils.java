@@ -27,10 +27,11 @@ public class JarUtils {
 
 	public static void createJar(File outputFile, File fileDir) throws FileNotFoundException, IOException {
 
-		Manifest manifest = new Manifest();
-		manifest.getMainAttributes().put(Attributes.Name.MANIFEST_VERSION, "1.0");
-
-		JarOutputStream jarOutputStream = new JarOutputStream(new FileOutputStream(outputFile), manifest);
+//		Manifest manifest = new Manifest();
+//		manifest.getMainAttributes().put(Attributes.Name.MANIFEST_VERSION, "1.0");
+//
+//		JarOutputStream jarOutputStream = new JarOutputStream(new FileOutputStream(outputFile), manifest);
+		JarOutputStream jarOutputStream = new JarOutputStream(new FileOutputStream(outputFile));
 
 		addAllFiles(fileDir, jarOutputStream, "");
 

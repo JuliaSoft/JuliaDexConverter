@@ -91,6 +91,8 @@ public class JuliaConverter {
 		for (String i : applicationPackage.split("\\."))
 			folderApplicationPackage += i + File.separator;
 		folderApplicationPackage = folderApplicationPackage.substring(0, folderApplicationPackage.length() - 1);
+		
+//		folderApplicationPackage = "org\\telegram";
 
 		// move generated file in the outgoing JAR
 		try { 
@@ -106,7 +108,6 @@ public class JuliaConverter {
 				else
 					f.delete();
 			}
-			FileUtils.deleteDirectory(new File("META-INF"));
 			
 			// 6. Compress other files in lib.jar file
 			JarUtils.createJar(fileNameLibrary, tmpFileName);
