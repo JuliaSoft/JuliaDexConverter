@@ -1,4 +1,4 @@
-This document is aimed to give an overview about the program configuration and to give the basic idea that stands behind.
+This document is aimed to give an overview about the program configuration and the idea which is behind.
 
 The sections are structured as follows:
 
