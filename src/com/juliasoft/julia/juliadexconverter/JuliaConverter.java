@@ -28,6 +28,8 @@ public class JuliaConverter {
 	public static String pathTmpFileNameClass = pathTemp + File.separator + "tmp_class.jar";
 	public static String pathTmpFileNameXml = pathTemp + File.separator + "tmp_xml.jar";
 
+	public static String forceFolderApplicationPackage = null;
+
 	static void apk2Jar(String fileNameInput, String fileNameApplication, String fileNameLibrary) {
 
 		if (pathTemp.isEmpty() || pathTmpFileNameClass.isEmpty() || pathTmpFileNameXml.isEmpty())
@@ -62,7 +64,8 @@ public class JuliaConverter {
 			e.printStackTrace();
 		}
 
-		// 2. Trasnlate APK -> JAR w/ only xml files and relateive resources (using ApkTool)
+		// 2. Trasnlate APK -> JAR w/ only xml files and relateive resources
+		// (using ApkTool)
 		ResourcesDecoder.from(fileNameInput).setTempDir(pathTemp).to(tmpFileNameXml);
 
 		File tmpFileName = new File(pathTemp + System.currentTimeMillis() % 1000);
@@ -83,19 +86,27 @@ public class JuliaConverter {
 
 		System.out.println("EXTRACT: DONE!");
 
-		// 4. Get package information from manifest.xml file looking into "package" attribute of manifest tag
+		// 4. Get package information from manifest.xml file looking into
+		// "package" attribute of manifest tag
 		String applicationPackage = getPackageName(tmpFileName + File.separator + "AndroidManifest.xml");
 
 		String folderApplicationPackage = "";
 
-		for (String i : applicationPackage.split("\\."))
-			folderApplicationPackage += i + File.separator;
-		folderApplicationPackage = folderApplicationPackage.substring(0, folderApplicationPackage.length() - 1);
+		if (forceFolderApplicationPackage != null && !forceFolderApplicationPackage.isEmpty()) {
+			folderApplicationPackage = forceFolderApplicationPackage;
+		} else {
+
+			for (String i : applicationPackage.split("\\."))
+				folderApplicationPackage += i + File.separator;
+			folderApplicationPackage = folderApplicationPackage.substring(0, folderApplicationPackage.length() - 1);
+			
+		}
 
 		// move generated file in the outgoing JAR
-		try { 
-			
-			// 5. Compress all files under package_folder/, res/ and AndroidManifest.xml in app.jar file
+		try {
+
+			// 5. Compress all files under package_folder/, res/ and
+			// AndroidManifest.xml in app.jar file
 			String[] applicationFiles = { folderApplicationPackage, "res", "AndroidManifest.xml" };
 			JarUtils.createJar(fileNameApplication, tmpFileName, applicationFiles);
 
@@ -106,8 +117,7 @@ public class JuliaConverter {
 				else
 					f.delete();
 			}
-			FileUtils.deleteDirectory(new File("META-INF"));
-			
+
 			// 6. Compress other files in lib.jar file
 			JarUtils.createJar(fileNameLibrary, tmpFileName);
 
