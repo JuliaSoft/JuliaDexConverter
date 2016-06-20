@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/d2j-base-cmd"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/d2j-j6"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/d2j-jasmin"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/d2j-smali"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dex-ir"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dex-reader"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dex-reader-api"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dex-tools"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dex-translator"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dex-writer"/>
+	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/org.apache.commons.io.jar"/>
+	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/com.google.guava_1.6.0.jar"/>
+	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/apktool-lib.jar"/>
+	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/apktool-cli.jar"/>
+	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/brut.j.dir.jar"/>
+	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/brut.j.common.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
