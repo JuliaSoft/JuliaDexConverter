@@ -20,28 +20,28 @@ The sections are structured as follows:
 	
 # Purpouses
 
-- It has two aims:
+- First: this aim could be split in two:
 
 1. transform dex into standard java class files
 2. transform XML file in a readable format.
 
-Unfortunally I did not able to find a full library which can perform both tasks.
+Unfortunately I did not able to find a full library which performs both tasks.
 To achieve this I merged two stable tools: Dex2Jar and ApkTool.
 
-**Dex2Jar** performs the code transformation, it reads dex file and, throuth a set of code manipulation, it will re-build relative class files (with some approximations).
+**Dex2Jar** performs code transformation, it reads dex file and, through a set of code manipulation, it will re-build relative class files (with some approximations).
 
-**ApkTool** performs the XML transformation: the xml files kept into apk are stored in a binary format, this tool is able to revert them in a readable representation.
+**ApkTool** performs the XML transformation: the xml files kept into apk are stored in a binary format, this tool is able to transform them in a readable representation.
 
-- The second aim is to transfer debug information from Dex to Class. 
+- The second aim is transferring debug information from Dex to Class. 
 
 Even in this case, there are not tools able to perform this operation.
-To achieve it I've developed a new code-transformation in Dex2Jar which tries to preserve line numbers. This is just a prototype, but it works fine on my tests. It could be also improved.
+To achieve it I've developed a new code-transformation in Dex2Jar which tries to preserve line numbers. This is just a prototype, but it works fine form my purposes. Anyway, It could be also improved.
 
 - The third aim is to craft 2 jar files. 
 
 One which contains all classes that belong to original application, called "application.jar", and another one which contains all classes used as library, called "library.jar".
 This point is important in order to perform better analysis through Julia.
-From pratical terms, we'll submit the application.jar file with -si option and library.jar file with -i option.
+From practical point of view, we'll submit the application.jar file with -si option and library.jar file with -i option.
 
 # How it works
 
