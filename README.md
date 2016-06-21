@@ -11,8 +11,6 @@ The sections are structured as follows:
 ## Requirement:
 
 - (My)Dex2Jar sources (git clone https://tregua87@bitbucket.org/tregua87/dex2jar.git)
-- ApkTool sources (git clone https://github.com/iBotPeaches/Apktool.git)
-- asm-debug-all-4.1.jar download (search it on Web)
 
 ## Eclipse settings
 
