@@ -10,16 +10,13 @@ The sections are structured as follows:
 
 ## Requirement:
 
-- (My)Dex2Jar sources (git clone https://tregua87@bitbucket.org/tregua87/dex2jar.git)
+- (My)Dex2Jar sources (git clone https://bitbucket.org/tregua87/dex2jar.git)
 
 ## Eclipse settings
 
-1. Julia Dex Converter clone: git clone https://tregua87@bitbucket.org/tregua87/juliadexconverter.git
-2. Import project in Eclipse
-3. Fix build path:
-	1. add all d2j projects 
-	2. add all apktool projects
-	3. add asm-debug-all-4.1.jar as external jar library
+0. Be sure to have imported my version of Dex2Jar, in case follow these instructions (https://bitbucket.org/tregua87/dex2jar.git)
+1. Import Julia Dex Converter trough the relative Eclipse Plugin to handle Git repositories
+2. Fix build path of Julia Dex Converter in order to point toward Dex2Jar projects
 	
 # Purpouses
 
