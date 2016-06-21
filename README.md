@@ -20,7 +20,9 @@ The sections are structured as follows:
 	
 # Purpouses
 
-- The first aim is double: I wish transform dex into standard java class files and also transform XML file in a readable format.
+- It has two aims: 
+1. transform dex into standard java class files
+2. transform XML file in a readable format.
 
 Unfortunally I did not able to find a full library which can perform both tasks.
 To achieve this I merged two stable tools: Dex2Jar and ApkTool.
