@@ -20,7 +20,8 @@ The sections are structured as follows:
 	
 # Purpouses
 
-- It has two aims: 
+- It has two aims:
+
 1. transform dex into standard java class files
 2. transform XML file in a readable format.
 
