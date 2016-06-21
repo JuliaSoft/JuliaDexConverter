@@ -12,11 +12,11 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/dex-tools"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/dex-translator"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/dex-writer"/>
-	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/org.apache.commons.io.jar"/>
-	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/com.google.guava_1.6.0.jar"/>
-	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/apktool-lib.jar"/>
-	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/apktool-cli.jar"/>
-	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/brut.j.dir.jar"/>
-	<classpathentry kind="lib" path="/home/flavio/workspace/juliadexconverter/libs/brut.j.common.jar"/>
+	<classpathentry kind="lib" path="libs/apktool-cli.jar"/>
+	<classpathentry kind="lib" path="libs/apktool-lib.jar"/>
+	<classpathentry kind="lib" path="libs/brut.j.common.jar"/>
+	<classpathentry kind="lib" path="libs/brut.j.dir.jar"/>
+	<classpathentry kind="lib" path="libs/com.google.guava_1.6.0.jar"/>
+	<classpathentry kind="lib" path="libs/org.apache.commons.io.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
