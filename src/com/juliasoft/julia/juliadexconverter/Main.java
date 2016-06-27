@@ -7,7 +7,7 @@ public class Main {
 		System.out.println("START!");
 
 		if (args.length != 3) {
-			System.out.println("run: MyDex2Jar <inputfile> <outpufile>");
+			System.out.println("run: MyDex2Jar <inputfile> <outpufile app> <outputfile lib>");
 			System.out.println("END!");
 			System.exit(1);
 		}

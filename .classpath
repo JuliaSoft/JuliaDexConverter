@@ -18,5 +18,8 @@
 	<classpathentry kind="lib" path="libs/brut.j.dir.jar"/>
 	<classpathentry kind="lib" path="libs/com.google.guava_1.6.0.jar"/>
 	<classpathentry kind="lib" path="libs/org.apache.commons.io.jar"/>
+	<classpathentry kind="lib" path="libs/brut.j.util.jar"/>
+	<classpathentry kind="lib" path="libs/common-lang3.jar"/>
+	<classpathentry kind="lib" path="libs/xmlpull-xpp3-1.1.4c.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
