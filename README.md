@@ -10,7 +10,7 @@ The sections are structured as follows:
 
 ## Requirement:
 
-- (My)Dex2Jar sources (https://bitbucket.org/tregua87/dex2jar.git <= README)
+- (My)Dex2Jar sources (https://bitbucket.org/tregua87/dex2jar.git <= README) or (https://github.com/JuliaSoft/dex2jar.git)
 
 ## Eclipse settings
 
